@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --respawn --transpile-only src/server.ts",
+    "test": "vitest",
     "lint": "eslint src/**/*.ts"
   },
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
@@ -21,7 +22,8 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "*"
+    "typescript": "*",
+    "vitest": "^0.23.2"
   },
   "dependencies": {
     "cuid": "^2.1.8"
