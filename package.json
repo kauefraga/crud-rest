@@ -1,0 +1,12 @@
+{
+  "name": "crud-rest",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kauefraga/crud-rest"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
+  "license": "MIT"
+}
