@@ -74,7 +74,7 @@ If you still prefer npm: `npm i && npm run dev`
 - 🧑‍💻 Developed on [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npmjs.com/package/ts-node-dev)
   > Improve dev experience by adding type safety
 
-## 🗃️ Routes view
+## 🗃️ Routes view (not implemented)
 
 ```bash
 # Return a specific user -> user (!id = all users)
