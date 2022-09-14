@@ -77,26 +77,26 @@ If you still prefer npm: `npm i && npm run dev`
 ## 🗃️ Routes view (not implemented)
 
 ```bash
-# Return a specific user -> user (!id = all users)
-GET /users/{id} ou /users?id=...
+# Return a specific user -> user (!name = all users)
+GET /users/{name} ou /users?name=...
 
 # Return a specific user post -> post (!id = all user posts)
-GET /users/id/posts/{id}
+GET /users/name/posts/{id}
 
 # Create a user -> user
 POST /users/create
 
 # Create a post -> post
-POST /users/id/posts/create
+POST /users/name/posts/create
 
 # Update a post -> post (if i can, a diff)
-PUT /users/id/posts/id
+PUT /users/name/posts/id
 
 # Delete a user -> user/void
-DELETE /users/id
+DELETE /users/name
 
 # Delete a post -> post/void
-DELETE /users/id/posts/id
+DELETE /users/name/posts/id
 ```
 
 ## 📝 License
