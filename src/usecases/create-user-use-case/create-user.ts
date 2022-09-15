@@ -13,6 +13,10 @@ export class CreateUserUseCase {
   ) {}
 
   async execute({ name }: CreateUserRequest): Promise<CreateUserResponse> {
+    if (!name) {
+      throw new Error('No name provided');
+    }
+
     const userAlreadyExists = await this.usersRepository.findByName(name);
 
     if (userAlreadyExists) {
