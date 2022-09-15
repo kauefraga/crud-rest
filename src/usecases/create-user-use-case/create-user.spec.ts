@@ -14,7 +14,7 @@ describe('Create User', () => {
     })).resolves.toBeInstanceOf(User);
   });
 
-  it('should not be able to create an user', async () => {
+  it('should not be able to create an user (same name)', async () => {
     const createUserUseCase = new CreateUserUseCase(
       new InMemoryUsersRepository(),
     );
@@ -25,6 +25,16 @@ describe('Create User', () => {
 
     expect(createUserUseCase.execute({
       name: 'John Doe',
+    })).rejects.toThrow();
+  });
+
+  it('should not be able to create an user (empty name)', async () => {
+    const createUserUseCase = new CreateUserUseCase(
+      new InMemoryUsersRepository(),
+    );
+
+    expect(createUserUseCase.execute({
+      name: '',
     })).rejects.toThrow();
   });
 });
