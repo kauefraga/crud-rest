@@ -13,4 +13,10 @@ export class InMemoryUsersRepository implements UsersRepository {
 
     return foundUser || null;
   }
+
+  async delete(name: string) {
+    const foundUser = await this.findByName(name);
+
+    this.users.filter((user) => user.name !== foundUser?.name);
+  }
 }
