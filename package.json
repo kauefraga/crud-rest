@@ -5,8 +5,10 @@
     "type": "git",
     "url": "https://github.com/kauefraga/crud-rest"
   },
-  "main": "index.js",
+  "main": "dist/http/server.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/http/server.js",
     "dev": "tsnd --respawn --transpile-only src/http/server.ts",
     "test": "vitest src/core",
     "lint": "eslint src/**/*.ts"
