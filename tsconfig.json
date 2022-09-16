@@ -103,6 +103,5 @@
   "exclude": [
     "vite.config.ts",
     "**/*.spec.ts",
-    "src/http/types/**/*.ts"
   ]
 }

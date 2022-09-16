@@ -104,3 +104,4 @@ typings/
 
 # Render deploy
 dist/core
+dist/http/types
