@@ -1,6 +1,8 @@
-import cors from 'cors';
 import express, { Application } from 'express';
+import cors from 'cors';
+import { RequestLimiter } from './middlewares/RequestLimiter';
 import { router } from './routes';
+import { NotFound } from './middlewares/404';
 
 function buildApp(): Application {
   const app = express();
@@ -8,7 +10,11 @@ function buildApp(): Application {
   app.use(cors());
   app.use(express.json());
 
+  app.use(RequestLimiter);
+
   app.use(router);
+
+  app.use(NotFound);
 
   return app;
 }
