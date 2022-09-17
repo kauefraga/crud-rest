@@ -10,7 +10,9 @@
     "build": "tsc",
     "start": "node dist/http/server.js",
     "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
-    "test": "vitest src/core",
+    "test": "vitest",
+    "test:core": "vitest src/core",
+    "test:http": "vitest src/http",
     "lint": "eslint src/**/*.ts"
   },
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
