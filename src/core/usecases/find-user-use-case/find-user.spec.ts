@@ -13,12 +13,13 @@ describe('Find User', () => {
 
     await inMemoryUsersRepository.create(
       new User({
+        id: 'CUID-TEST',
         name: 'John Doe',
       }),
     );
 
     expect(findUserUseCase.execute({
-      name: 'John Doe',
+      id: 'CUID-TEST',
     })).resolves.toBeInstanceOf(User);
   });
 
@@ -28,7 +29,7 @@ describe('Find User', () => {
     );
 
     expect(findUserUseCase.execute({
-      name: '',
+      id: '',
     })).rejects.toThrow();
   });
 
@@ -38,7 +39,7 @@ describe('Find User', () => {
     );
 
     expect(findUserUseCase.execute({
-      name: 'John Doe',
+      id: 'CUID-TEST',
     })).rejects.toThrow();
   });
 });

@@ -2,7 +2,7 @@ import { User } from '../../entities/user';
 import { UsersRepository } from '../../repositories/users-repository';
 
 interface FindUserRequest {
-  name: string;
+  id: string;
 }
 
 type FindUserResponse = User;
@@ -12,12 +12,12 @@ export class FindUserUseCase {
     private usersRepository: UsersRepository,
   ) { }
 
-  async execute({ name }: FindUserRequest): Promise<FindUserResponse> {
-    if (!name) {
-      throw new Error('No name provided');
+  async execute({ id }: FindUserRequest): Promise<FindUserResponse> {
+    if (!id) {
+      throw new Error('No ID provided');
     }
 
-    const user = await this.usersRepository.findByName(name);
+    const user = await this.usersRepository.findById(id);
 
     if (!user) {
       throw new Error('User does not exists');
