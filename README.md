@@ -21,7 +21,7 @@
   />
 </p>
 
-<h4 align="center">🍃 Building an API Restful to use all good practices that i known and keep learning 🍃</h4>
+<h4 align="center">🍃 Building an API Restful to use all good practices that i've known and keep learning 🍃</h4>
 
 ## ⬇️ How to download
 
