@@ -1,14 +1,15 @@
 {
   "name": "crud-rest",
-  "version": "1.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/kauefraga/crud-rest"
   },
   "main": "dist/http/server.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/http/server.js",
+    "build": "pnpm i && tsc && rm -rf node_modules",
+    "postbuild": "pnpm i --prod",
+    "start": "node .",
     "dev": "NODE_ENV=development tsnd --respawn --transpile-only src/http/server.ts",
     "test": "vitest",
     "test:core": "vitest src/core",
