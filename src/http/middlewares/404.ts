@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { baseUrl } from '../BaseUrl';
+import { baseUrl } from '../base-url';
 import { ApiResponse } from '../types/ApiResponse';
 
 export function NotFound(
